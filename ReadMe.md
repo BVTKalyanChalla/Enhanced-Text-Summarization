@@ -129,10 +129,6 @@ Integrate advanced text-to-speech capabilities.
 
 Deploy the application to a cloud service like AWS or Heroku.
 
-License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
 Acknowledgments
 
 Hugging Face for the mBART model.
