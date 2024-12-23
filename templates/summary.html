@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summarized Text</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Summarized Text</h1>
+        
+        <div class="summary">
+            <p>{{ summarized_text }}</p>
+        </div>
+
+        <h2>Audio of Summarized Text</h2>
+        <audio controls>
+            <source src="{{ url_for('static', filename='summary.mp3') }}" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h2>ROUGE Score</h2>
+        <p>{{ rouge_scores }}</p>
+
+        <h2>User ID: {{ user_id }}</h2>
+
+        <form action="/review" method="post">
+            <label for="review_text">Leave your review:</label>
+            <textarea id="review_text" name="review_text" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+        <a href="/index">Go back to home</a>
+    </div>
+</body>
+</html>
